@@ -169,7 +169,7 @@ const Task = ({ task }: TaskProps) => {
     >
       {task.attachments && task.attachments.length > 0 && (
         <Image
-          src={`/${task.attachments[0].fileURL}`}
+          src={`https://pm-s3-imagess.s3.eu-west-1.amazonaws.com/${task.attachments[0].fileURL}`}
           alt={task.attachments[0].fileName}
           height={200}
           width={400}
@@ -219,7 +219,7 @@ const Task = ({ task }: TaskProps) => {
             {task.assignee && (
               <Image
                 key={task.assignee.userId}
-                src={`/${task.assignee.profilePictureUrl}`}
+                src={`https://pm-s3-imagess.s3.eu-west-1.amazonaws.com/${task.assignee.profilePictureUrl}`}
                 alt={task.assignee.username}
                 height={30}
                 width={30}
@@ -230,7 +230,7 @@ const Task = ({ task }: TaskProps) => {
             {task.author && (
               <Image
                 key={task.author.userId}
-                src={`/${task.author.profilePictureUrl}`}
+                src={`https://pm-s3-imagess.s3.eu-west-1.amazonaws.com/${task.author.profilePictureUrl}`}
                 alt={task.author.username}
                 height={30}
                 width={30}
